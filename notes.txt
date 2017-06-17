@@ -1,0 +1,40 @@
+--- MODELS ---
+
+/model/main.blend = The main blender file containing the dinning room scene. Other models have been linked into this scene.
+/model/table.blend = The model for the table.
+/model/chair.blend = The model for the chair, it has been mirrored to produce multiple.
+/model/rug.blend = The model for the rug. Created using the hair particle effect system.
+/model/place_settings.blend = The model for the place settings. Containing bowl, plate, cutlery and glass.
+/model/cutlery.blend = The model for the knife and fork linked into the place settings model.
+/model/glass.blend = The model for the glass linked into the place settings model.
+/model/candle = The model for the candle which has been lit by using materials and the node system.
+
+--- FEATURES AND TECHNIQUES ---
+
+All models have been linked into main.blend by creating a group in each of their own .blend project.
+
+Several effects and modifiers were used throughout the development of the scene. Most noticeably, include the use of the hair particle system when creating the rug.
+Also the mirror modifier was used to create symmetric objects which was particularly useful when modeling the chair and table. The flame on the candle was also made
+using an array modifier and applying an emmision material that was set based on a temperature node in the node system. The subdivison modifer was also used to produce
+a round / curve look on multiple objects. Point lighting was used to simulate accurate lighting in the scene. The spin tool was used to help created some rounded shape
+such as the bowl.
+
+--- HOW MODELS RELATE ---
+
+place_settings.blend = cutlery.blend + glass.blend
+main.blend = table.blend + chair.blend + rug.blend + place_settings.blend + candle.blend 
+
+--- IMAGE TEXTURES ---
+
+/model/textures/oad_wood.jpg = For the main wood texture on the table and chairs (http://www.duriart.eu/images/Slike/Hrast.jpg).
+/model/textures/wood_floor.jpg = For the wooden floor panel (http://www.servicedc.com/images/lovely-hardwood-floor-bedroom-4-related-with-brown-wood-texture-seamless-light-wood-floor-1500-x-994.jpg).
+/model/textures/chair_seat.jpg = For the black leather of the seat's cushion (http://autointeriordecorators.com/wp-content/cache/image/static/fa0351093fff227dbdc52076f045fb63.jpg).
+/model/textures/dark_oak_wood.jpg = For the darker wooden areas on the table (http://www.photoshopbuzz.com/wp-content/uploads/2013/06/woodtexture7.jpg).
+/model/textures/painting.jpg = To replace the rubbish painting used in the sample picture (http://emmaboakes.format.com/untitled-gallery).
+/model/textures/view_outside.jpg = A garden to represent the scene outside (http://weknowyourdreams.com/image.php?pic=/images/garden/garden-04.jpg).
+/model/textures/silver.jpg = A silver texture to be applied to the cutlery (https://s-media-cache-ak0.pinimg.com/originals/3d/21/d8/3d21d8da9d3a83378551ae068459fac1.jpg).
+/model/textures/candle.jpg = A texture for the candle (https://www.michaels.com/ashland-layered-pillar-candle-seaside/10135467.html).
+
+--- ANIMATION ---
+
+The animation uses a bezier curve to create a path around the scene. A camera is added with constraints to follow this path and focus on the candle as it moves around.
